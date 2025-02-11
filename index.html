@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn & Play - Educational Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+<body>
+    <div class="paper-cut-rain">
+        
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="app">
+        <!-- Hero Section -->
+        <div class="hero">
+            <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80&w=1000" 
+                 alt="Hero background" 
+                 class="hero-image">
+
+        
+                 <button class="log">Login</button>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+
+                <h1>Learn & Play</h1>
+                <p>Embark on an exciting educational journey!</p>
+                <button class="primary-button" >
+                    <i data-lucide="play"></i>
+                    
+                   <a href="/text" style="text-decoration: none;color: white;" > Learn with Text</a>
+                </button>
+                
+               
+              
+            </div>
+        </div>
+    </div>
+    
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="goToPage('http://127.0.0.1:3002/templates/game1.html')">
+                        <i data-lucide="crown"></i>
+                        Featured Games
+                    </button>
+                    <button class="nav-button" onclick="goToPage('http://127.0.0.1:3002/templates/game3.html')">
+                        <i data-lucide="book-open"></i>
+                        Language Skills
+                    </button>
+                    <button class="nav-button">
+                        <i data-lucide="calculator"></i>
+                        Math Adventures
+                    </button>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Games Grid -->
+        <main class="container">
+            <div class="games-grid">
+                <!-- Game Card 1 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Word Explorer">
+                    <div class="game-content">
+                        <h3>Word Explorer</h3>
+                        <div class="game-level">
+                            <i data-lucide="trophy"></i>
+                            <span>Beginner</span>
+                        </div>
+                        <div class="game-rating">
+                            <i data-lucide="star" class="star-icon"></i>
+                            <span>4.5</span>
+                        </div>
+                        <button class="play-button" onclick="goToPage('http://127.0.0.1:3002/templates/game2.html')">
+                            <i data-lucide="play"></i>
+                            Play Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Number Quest">
+                    <div class="game-content">
+                        <h3>Number Quest</h3>
+                        <div class="game-level">
+                            <i data-lucide="trophy"></i>
+                            <span>Intermediate</span>
+                        </div>
+                        <div class="game-rating">
+                            <i data-lucide="star" class="star-icon"></i>
+                            <span>4.8</span>
+                        </div>
+                        <button class="play-button" onclick="goToPage('http://127.0.0.1:3002/templates/game1.html')">
+                            <i data-lucide="play"></i>
+                            Play Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="game-card">
+                    <img src="{{ url_for('static', filename='adv.jpg') }}" alt="Spelling Heroes">
+                    <div class="game-content">
+                        <h3>Spelling Heroes</h3>
+                        <div class="game-level">
+                            <i data-lucide="trophy"></i>
+                            <span>Advanced</span>
+                        </div>
+                        <div class="game-rating">
+                            <i data-lucide="star" class="star-icon"></i>
+                            <span>4.3</span>
+                        </div>
+                        <button class="play-button" onclick="goToPage('http://127.0.0.1:3002/templates/game3.html')">
+                            <i data-lucide="play"></i>
+                            Play Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Button -->
+<button class="play-button" onclick="goToPage('game1.html')">
+    <i data-lucide="play"></i>
+    Play Now
+</button>
+
+<!-- JavaScript -->
+<script>
+    function goToPage(url) {
+        window.location.href = url;
+    }
+
+    // Load Lucide Icons (if necessary)
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    });
+</script>
+</body>
+</html>
